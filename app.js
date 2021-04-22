@@ -28,10 +28,10 @@ async function changeFile () {
    await fs.writeFileSync( './JD_DailyBonus.js', content, 'utf8')
 }
 
-async function sendNotify (text,desp) {
+async function sendNotify (title,desp) {
   const options ={
     uri:  `https://sctapi.ftqq.com/${serverJ}.send`,
-    form: { text, desp },
+    form: { title, desp },
     json: true,
     method: 'POST'
   }
